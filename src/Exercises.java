@@ -4,11 +4,14 @@ public class Exercises {
 	
 	public static void main(String[] args) {
 		Exercises test = new Exercises ();
-		int[] myArray = {1,9,2,4,5,6,7,8,8,8};
+		/*
+		int[] myArray = {7,7,2,4,5,6,7,7,8,8};
 		System.out.println(test.ex1(myArray));
+		*/
+		System.out.println(test.ex2(false, false));
 	}
 	
-	/* Ejercicio 1
+	/* 	Exercise 1
 	 * Dado un array de elementos numericos (rango del 1 al 9)
 	 * Imprimir el numero con mas ocurrencias, imprimiendo la cantidad de ocurrencias y la primer ocurrencia del mismo.
 	 */
@@ -54,4 +57,28 @@ public class Exercises {
 				
 				
 	}
+
+	/*	Exercise 2
+	 * 	The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. 
+	 * 	We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
+	 */	
+	public boolean ex2 (boolean weekday, boolean vacation) {
+		if (!weekday || vacation){
+			return true;
+		} else
+			return false;
+	}
+	
+	/*	Exercise 3
+	 * 	Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+	 * 	Dado un int n, devuelve la diferencia absoluta entre n y 21, excepto que devuelve el doble de la diferencia absoluta si n es mayor de 21.
+	 */
+	public int ex3 (int n) {
+		if (n>21) {
+			return (n-21)*2;
+		} else {
+			return 21-n;
+		}
+	}
+
 }
